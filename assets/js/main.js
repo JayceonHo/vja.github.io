@@ -25,16 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
   initBenchSortToggle();
   initBenchEnhanceToggle();
   initGithubStats({
-    owner: "RAGEN-AI",
-    repo: "RAGEN",
-    starsEl: "#hero-stars-count",
-    forksEl: "#hero-forks-count",
+  owner: "JayceonHo",
+  repo: "VJA",
+  starsEl: "#hero-stars-count",
+  forksEl: "#hero-forks-count",
   });
   initBenchMatricesSortToggle();
   initBenchMatricesHeatToggle();
 
 
-  
+
 });
 
 

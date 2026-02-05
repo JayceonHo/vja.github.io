@@ -89,7 +89,7 @@ a:hover {
   gap: 10px;
   padding: 6px 10px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.306);
   border: 1px solid var(--border);
   text-decoration: none;
 }
@@ -108,6 +108,7 @@ a:hover {
 .brand__text {
   font-weight: 700;
   letter-spacing: 0.3px;
+  color: #000000;
 }
 
 .nav__list {
@@ -239,20 +240,37 @@ a:hover {
   font-size: clamp(44px, 6vw, 60px);
   font-weight: 800;
   letter-spacing: -0.02em;
+  color: #07015a;
 }
 .hero__subtitle{
-  font-size: clamp(30px, 3.5vw, 50px);
+  /* font-size: clamp(30px, 3.5vw, 50px);
   opacity: 0.85;
+  font-weight: 600; */
+
+  font-size: clamp(30px, 4.6vw, 72px);
   font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+
+  color: rgba(0,0,0,0.99);
+  opacity: 1; /* 你原来用 opacity 会整体变淡，关掉 */
+  margin: 0;
+
 }
 
 .hero__desc {
-  margin: 0 auto;
+  /* margin: 0 auto;
   max-width: 760px;
-  text-align: center;
+  text-align: center; */
+  font-size: clamp(20px, 2.0vw, 34px);
+  font-weight: 500;
+  line-height: 1.35;
+
+  color: rgba(0,0,0,0.58);
+  margin-top: 10px;
 }
 
-.hero__announcement {
+/* .hero__announcement {
   display: inline-block;
   margin-top: 10px;
   color: rgba(255, 255, 255, 0.9);
@@ -263,6 +281,37 @@ a:hover {
 .hero__announcement:hover {
   text-decoration: none;
   border-bottom-color: rgba(255, 255, 255, 0.55);
+} */
+/* hero announcement: small + light gray */
+.hero__announcement{
+  display: inline-block;
+  margin-top: 10px;
+
+  font-size: 14px;                 /* 小字，可改 13-15 */
+  line-height: 1.5;
+  font-weight: 500;
+
+  color: rgba(0,0,0,0.55);         /* 浅灰（浅色主题） */
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(0,0,0,0.20);
+}
+
+.hero__announcement:hover{
+  color: rgba(0,0,0,0.68);
+  border-bottom-color: rgba(0,0,0,0.32);
+  text-decoration: none;
+}
+
+/* 第一行：大标题深灰 */
+.hero .hero__subtitle{
+  font-size: clamp(44px, 4.6vw, 60px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+
+  color: rgba(0,0,0,0.88);
+  opacity: 1; /* 你原来用 opacity 会整体变淡，关掉 */
+  margin: 0;
 }
 
 /* Buttons */
@@ -375,6 +424,65 @@ a:hover {
   font-size: 14px;
 }
 
+.hero__figures{
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* 让两张图同宽 */
+.hero__figures .hero__figure{
+  flex: 1 1 0;
+  margin: 18px 0 0; /* 覆盖你之前 figure 的 auto 居中 margin */
+  width: auto;
+}
+
+/* 图片自适应 */
+.hero__figures .hero__figure img{
+  width: 100%;
+  height: auto;
+}
+
+/* 小屏换成上下 */
+@media (max-width: 900px){
+  .hero__figures{
+    flex-direction: column;
+  }
+}
+
+.hero__figure--pair{
+  width: min(900px, 100%);
+  margin: 18px auto 0;
+}
+
+.hero__figure-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.hero__figure-row img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px; /* 你原来 figure 里已有圆角的话可删 */
+}
+
+.hero__caption{
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* 小屏自动上下 */
+@media (max-width: 900px){
+  .hero__figure-row{
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* Authors */
 .authors {
   margin: 18px auto 0;
@@ -393,6 +501,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 14px;
+  color: #0A6EFA;
 }
 
 .authors__list li {
@@ -415,6 +524,19 @@ a:hover {
   color: var(--muted-2);
   font-size: 14px;
 }
+
+/* Authors: force blue like the screenshot */
+.authors__list li,
+.authors__list a,
+.authors__list a:visited {
+  color: #0A6EFA !important;
+}
+
+.authors__list a:hover {
+  color: #0A6EFA !important;
+  text-decoration: underline;
+}
+
 
 /* =========================
    Accordion
@@ -502,7 +624,7 @@ a:hover {
   font-size: 20px;
   font-weight: 700;
   color: #fff;
-  background: linear-gradient(90deg, #26306e 0%, #5f61d8 100%);
+  background: linear-gradient(90deg, #4d5dc8 0%, #5f61d8 100%);
 }
 
 /* 右侧 + / - 图标 */
@@ -838,7 +960,7 @@ body{
 .accordion__btn {
   width: 100%;
   border: 0;
-  background: linear-gradient(90deg, #24306f 0%, #5f62d8 100%);
+  background: linear-gradient(90deg, #620a74 0%, #5f62d8 100%);
   color: #fff !important;              /* 重点：强制白字，解决你现在黑字问题 */
   cursor: pointer;
 
@@ -1552,6 +1674,17 @@ body{
   opacity: 0.75;
 }
 
+/* 统一轮播卡片图片高度 */
+.example-card__media{
+  height: 400px;
+  overflow: hidden;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04); /* 留白时不突兀，可选 */
+}
 
-
-
+.example-card__media img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;    /* 不裁剪 */
+  display: block;
+}
