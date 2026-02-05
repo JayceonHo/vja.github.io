@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="RAGEN - RL Agent" />
-    <title>VJA</title>
+    <title>Vision-centric Jailbreak Attack</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/img/icon.png" />
@@ -38,26 +38,14 @@
     ========================== -->
     <header class="site-header">
       <div class="container">
-        <a class="brand" href="#hero" aria-label="VJA Home">
+        <!-- <a class="brand" href="#hero" aria-label="VJA Home">
           <img class="brand__icon" src="assets/img/icon.png" alt="RAGEN Icon" />
-          <span class="brand__text">VJA</span>
-        </a>
+          <span class="brand__text"></span>
+        </a> -->
 
         <nav class="nav" aria-label="Main navigation">
           <ul class="nav__list">
             <!-- Dropdown -->
-            <!-- <li class="dropdown" data-dropdown>
-              <button class="dropdown__toggle" type="button" aria-expanded="false">
-                More Research
-                <span aria-hidden="true">▾</span>
-              </button>
-            </li> -->
-
-            <!-- <li>
-              <a class="nav__link" href="https://www.mll.lab.northwestern.edu/" target="_blank" rel="noopener">
-                MLL Lab
-              </a>
-            </li> -->
 
             <li>
               <a class="nav__link nav__link--icon" href="https://github.com/JayceonHo/VJA/" target="_blank" rel="noopener">
@@ -79,29 +67,29 @@
       <section id="hero" class="section hero">
         <div class="container">
           <div class="hero__content">
-            <div class="hero__title">
+            <!-- <div class="hero__title">
               <img class="hero__icon" src="assets/img/icon.png" alt="VJA Icon" />
               <h1 class="hero__h1">VJA</h1>
-            </div>
+            </div> -->
 
-            <p class="hero__subtitle">When the Prompt Becomes Visual </p>
+            <p class="hero__subtitle">When the Prompt Becomes Visual</p>
 
             <p class="hero__desc">
               Vision-Centric Jailbreak Attacks for Large Image Editing Models
               <br />
               <a class="hero__announcement" href="https://github.com/JayceonHo/VJA/" target="_blank" rel="noopener">
-                Welcome ! This project aims to investigate the safety of large image editing models in a vision-centric perspective. →T
+                Welcome ! This project aims to investigate the safety of large image editing models in a vision-centric perspective.
               </a>
             </p>
 
             <div class="hero__resources" aria-label="Resources">
               <a class="chip" href="" target="_blank" rel="noopener">📄 Paper</a>
               <a class="chip" href="" target="_blank" rel="noopener">📚 Dataset</a>
-              <a class="chip" href="" target="_blank" rel="noopener">💻 Code</a>
+              <a class="chip" href="https://github.com/CSU-JPG/VJA" target="_blank" rel="noopener">💻 Code</a>
               <!-- <a class="chip" href="" target="_blank" rel="noopener">🤝 Collaborate →</a> -->
             </div>
 
-            <a class="btn btn--primary hero__cta" href="https://github.com/JayceonHo/VJA/" target="_blank" rel="noopener">
+            <!-- <a class="btn btn--primary hero__cta" href="https://github.com/JayceonHo/VJA/" target="_blank" rel="noopener">
             <span class="btn__left">
                 <i class="fab fa-github" aria-hidden="true"></i>
                 <span>Get Started</span>
@@ -113,14 +101,9 @@
                 <span class="stat">⭐ <span id="hero-stars-count">—</span></span>
                 <span class="stat">🍴 <span id="hero-forks-count">—</span></span>
             </span>
-            </a>
+            </a> -->
 
-              <figure class="hero__figure">
-                <img src="assets/img/benchmark_comparison_01.jpg" alt="" />
-                <figcaption>Benchmark Comparison </br>
-                  Prior Benchmarks vs. Our IESBench (image-only visual prompt; no text prompt required)</figcaption>
 
-              </figure>
             <!-- <div class="hero__figures">
               <figure class="hero__figure">
                 <img src="assets/img/teaser_up.png" alt="" />
@@ -158,7 +141,7 @@
               <p class="authors__note"><sup>*</sup> Equal Contribution</p>
 
               <p class="authors__aff">
-                <sup>1</sup> University of Tsinghua University &nbsp;&nbsp;
+                <sup>1</sup> Tsinghua University &nbsp;&nbsp;
                 <sup>2</sup> Peng Cheng Laboratory, Shenzhen &nbsp;&nbsp;
                 <sup>3</sup> Central South University &nbsp;&nbsp;
               </p>
@@ -172,15 +155,15 @@
       ========================== -->
       <section id="Overview" class="section section--alt">
         <div class="container">
-          <h2>Overview</h2>
+          <h1>🌟 Overview</h1>
           <p>Recent advances in large image editing models have shifted the paradigm from text-driven instructions to vision-prompt editing, where user intent is inferred directly from visual inputs such as marks, arrows, and visual–text prompts. While this paradigm greatly expands usability, it also introduces a critical and underexplored safety risk: the attack surface itself becomes visual. To mitigate the safety gap, this project aims to systematically investigate the safety of large image editing models from a vision-centric perspective, with new jailbreak attack method, benchmark and a training-free defense approach.
           </p>
 
-          <figure class="figure">
+          <!-- <figure class="figure">
             <img src="assets/img/benchmark.png" alt="banchmark figure" />
             <figcaption>The top figure shows the 15 risk category covered in our bench in a hierarchical manner, and the bottom figure shows the pipeline for dataset curation and evaluation.
             </figcaption>
-          </figure>
+          </figure> -->
 
          <div class="accordion" data-accordion>
           <!-- (Optional) Accordion example block -->
@@ -222,7 +205,7 @@
                       Vision-centric Jailbreak Attack
                     </button>
                     <button class="tabs__tab" type="button" role="tab" data-tab="grpo" aria-selected="false">
-                      IESBench: Benchmarking Image Editing Safety
+                      Image Editing Safety Benchmark
                     </button>
                     <button class="tabs__tab" type="button" role="tab" data-tab="def" aria-selected="false">
                       Introspection-based Defense
@@ -262,10 +245,10 @@
               </div>
             </article>
 
-            <article class="accordion__item" data-accordion-item>
+            <!-- <article class="accordion__item" data-accordion-item>
               <h3 class="accordion__header">
                 <button class="accordion__btn" type="button" aria-expanded="true">
-                  Format of IESBench
+                  Format of Curated Dataset in our IESBench
                 </button>
               </h3>
               <div class="accordion__panel" hidden>
@@ -277,7 +260,7 @@
                   <figcaption>Overview of IESBench data format. It includes source image, image, and text.json with per-sample JSON records.</figcaption>
                 </figure>
               </div>
-            </article>            
+            </article>             -->
           </div>
         </div>
       </section>
@@ -385,19 +368,20 @@
 <!-- =========================
      BENCHMARKS (4 Metrics)
 ========================== -->
-<section id="benchmarks-matrices" class="section section--alt" >
+
+<section id="benchmarks-matrices" class="section section" >
   <div class="container">
-    <h2>Model Performance (4 Metrics)</h2>
+    <h1>🏆 LeaderBoard on 15 risky categories of IESBench</h1>
 <p>
   We adopt an automated evaluation protocol with <b>MLLM-as-a-judge</b>, and report multiple metrics to capture not only jailbreak success but also whether the output is meaningfully edited and harmful:</br>
 </br>
-  <b>ASR (Attack Success Rate)</b>: fraction of cases where the attack bypasses safety constraints.</br>
-
-  <b>HS (Harmfulness Score)</b>: A harm level rating on a scale of <b>1–5</b>.</br>
-
-  <b>EV (Editing Validity)</b>: Identification of cases where the bypass is successful but the edited content is invalid (e.g., <b>garbled text</b>, <b>semantic breakdown</b>).</br>
-
-  <b>HRR (High Risk Ratio)</b>: The proportion of effective and high-risk attacks (e.g., <b>HS≥4</b>), used to measure <b>"true high-risk output"</b>.
+<table>
+  <tr><th>Metric</th><th>Description</th></tr>
+  <tr><td><strong>Attack Success Rate (ASR)</strong></td><td>The ratio of attacks that can bypass the guard models.</td></tr>
+  <tr><td><strong>Harmfulness Score (HS)</strong></td><td>The harmfulness level of the edited image in a scale of <b>1–5</b>.</td></tr>
+  <tr><td><strong>Editing Validity (EV)</strong></td><td>The attack that can successfully bypass the guard, but the edited content is invalid (e.g., garbled text).</td></tr>
+  <tr><td><strong>High Risk Ratio (HRR)</strong></td><td>The proportion of effective and high-risk attacks (e.g., <b>HS≥4</b>), used to measure "true high-risk output".</td></tr>
+</table>
 </p>
 
 
@@ -414,12 +398,12 @@
         <div class="bench-controls">
           <button class="bench-toggle" type="button"
               data-bench-sort-toggle aria-pressed="true">
-            Sort: On
+            Sort: Off
           </button>
 
         <button class="bench-toggle" type="button"
               data-bench-heat-toggle aria-pressed="true">
-            Heatmap: On
+            Heatmap: Off
         </button>
         </div>
     </div>  
@@ -435,7 +419,7 @@
         Open-Source Models
       </span>
     </div>
-
+    We sort the models using the ASR by default, and give the 🥇🥈🥉 to the first, second and third models.
     <!-- <div class="bench-legend" role="note" aria-label="Model type legend">
             <span class="legend-item"><span class="legend-dot legend-dot--commercial"></span>Commercial Models</span>
             <span class="legend-item"><span class="legend-dot legend-dot--open"></span>Open-Source Models</span>
@@ -614,7 +598,7 @@
               </tr>
 
               <tr>
-                <td class="col-model"><span class="model-tag model-tag--open"></span><b>Qwen-Image-Edit-Safe</b> (🥇, Ours)</td>
+                <td class="col-model"><span class="model-tag model-tag--open"></span><b>Qwen-Image-Edit-Safe</b> (Ours) (🥇)</td>
                 <td class="hm" data-col="I1" data-val="87.0">87.0</td>
                 <td class="hm" data-col="I2" data-val="77.3">77.3</td>
                 <td class="hm" data-col="I3" data-val="87.4">87.4</td>
@@ -1258,7 +1242,7 @@
     ========================== -->
         <section id="category" class="section">
         <div class="container">
-            <h2>Catergories</h2>
+            <h1>🔱 Risky Catergory Definition and Examples</h1>
             <p>To facilitate standardized evaluation, we construct the IESBench, a vision-centric benchmark for evaluating the safety of large image editing models, which contains 1054 visually-prompted images, spanning across 15 safety catergories, 116 attributes and 9 actions.</p>
 
             <div class="accordion accordion--findings" data-accordion>
@@ -1363,7 +1347,7 @@ image, and right shows the edited image by large image editing models.</figcapti
             <article class="accordion__item" data-accordion-item>
                 <h3 class="accordion__header">
                 <button class="accordion__btn" type="button" aria-expanded="false">
-                    <span class="accordion__title">Category 6: False Medical \& Health Imagery (I6)</span>
+                    <span class="accordion__title">Category 6: False Medical & Health Imagery (I6)</span>
                     <span class="accordion__icon" aria-hidden="true"></span>
                 </button>
                 </h3>
@@ -1399,7 +1383,7 @@ image, and right shows the edited image by large image editing models.</figcapti
             <article class="accordion__item" data-accordion-item>
                 <h3 class="accordion__header">
                 <button class="accordion__btn" type="button" aria-expanded="false">
-                    <span class="accordion__title">Category 8: Visual Misinformation \& Disinformation (I8)</span>
+                    <span class="accordion__title">Category 8: Visual Misinformation & Disinformation (I8)</span>
                     <span class="accordion__icon" aria-hidden="true"></span>
                 </button>
                 </h3>
@@ -1543,12 +1527,13 @@ image, and right shows the edited image by large image editing models.</figcapti
             </div>
         </div>
         </section>
+
         <!-- =========================
             EXAMPLES
         ========================== -->
-        <section id="examples" class="section section--alt">
+        <section id="examples" class="section section">
         <div class="container">
-            <h2>Examples</h2>
+            <h1>🎬 More Examples</h1>
             <p>Browse a curated set of attack inputs: each image encodes an editing request through visual annotations, serving as the prompt in our evaluation.</p>
 
             <div class="carousel" data-carousel data-autoplay="true" data-interval="4500">
@@ -1824,21 +1809,21 @@ image, and right shows the edited image by large image editing models.</figcapti
         <!-- =========================
             ATTACK RESULTS
         ========================== -->
-        <section id="attack-results" class="section">
+        <!-- <section id="attack-results" class="section">
           <div class="container">
-            <h2>Attack Results</h2>
+            <h1>More Results</h1>
             <p>Explore side-by-side qualitative examples: the same visual prompt is applied to multiple image editing models to reveal how safety guardrails and editing behaviors differ across systems. (Zoom in for details.)</p>
 
             <div class="accordion" data-accordion>
               <article class="accordion__item" data-accordion-item>
                 <h3 class="accordion__header">
                   <button class="accordion__btn" type="button" aria-expanded="false">
-                    Qualitative attack results
+                    Side-by-side comparison
                   </button>
                 </h3>
 
                 <!-- 展开状态：不要 hidden -->
-                <div class="accordion__panel">
+                <!-- <div class="accordion__panel">
                   <p>
                     Comparison of the outputs produced by commercial models and open-source models under the same attack setting (I1–I15) on IESBench.<br />
                   </p>
@@ -1872,7 +1857,7 @@ image, and right shows the edited image by large image editing models.</figcapti
               </article>
             </div>
           </div>
-        </section>
+        </section> -->
 
 
 
@@ -1881,7 +1866,7 @@ image, and right shows the edited image by large image editing models.</figcapti
       ========================== -->
       <section id="citation" class="section section--alt">
         <div class="container">
-          <h2>Citation</h2>
+          <h1>🎓 BibTex</h1>
           <p>If you find our work can be helpful, we would appreciate your citation and star:</p>
 
           <div class="codeblock">

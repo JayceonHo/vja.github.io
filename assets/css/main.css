@@ -4,13 +4,13 @@
 :root {
   --bg: #0b1020;
   --bg-2: #0f1730;
-  --card: rgba(255, 255, 255, 0.06);
-  --card-2: rgba(255, 255, 255, 0.08);
-  --border: rgba(255, 255, 255, 0.12);
+  --card: rgba(255, 255, 255, 1);
+  --card-2: rgba(255, 255, 255, 1);
+  --border: rgba(255, 255, 255, 1);
 
-  --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.72);
-  --muted-2: rgba(255, 255, 255, 0.55);
+  --text: rgba(255, 255, 255, 1);
+  --muted: rgba(255, 255, 255, 1);
+  --muted-2: rgb(8, 1, 1);
 
   --primary: #ea4c89;
   --primary-hover: #f06aa0;
@@ -63,9 +63,14 @@ a:hover {
   margin: 0 auto;
 }
 
-/* =========================
-   Header / Nav
-========================= */
+.section h1 {
+  text-align: center;
+}
+
+/* Hide GitHub link in nav but keep the space */
+.nav__link--icon {
+  visibility: hidden;
+}
 .site-header {
   position: sticky;
   top: 0;
@@ -409,7 +414,7 @@ a:hover {
   padding: 16px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0);
 }
 
 .hero__figure img,
@@ -501,7 +506,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 8px 14px;
-  color: #0A6EFA;
+  color: #4efa0a;
 }
 
 .authors__list li {
@@ -529,13 +534,13 @@ a:hover {
 .authors__list li,
 .authors__list a,
 .authors__list a:visited {
-  color: #0A6EFA !important;
+  color: #fa0a4a !important;
 }
 
-.authors__list a:hover {
-  color: #0A6EFA !important;
+/* .authors__list a:hover {
+  color: #f6fa0a !important;
   text-decoration: underline;
-}
+} */
 
 
 /* =========================
@@ -604,7 +609,7 @@ a:hover {
   border-radius: 18px;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 10px 30px rgba(15, 20, 60, 0.12);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(255, 255, 255, 0.55);
 }
 
@@ -655,7 +660,8 @@ a:hover {
 /* panel 内容区（白底） */
 .accordion__panel {
   padding: 18px 18px 20px;
-  color: rgba(20, 20, 20, 0.85);
+  /* color: rgba(20, 20, 20, 0.85); */
+  color: rgba(255, 255, 255, 0.92);
   font-size: 16px;
   line-height: 1.8;
   background: rgba(255, 255, 255, 0.92);
@@ -852,7 +858,7 @@ body{
 }
 
 /* 卡片/面板背景从“白字玻璃态”变成“浅灰卡片” */
-.brand,
+/* .brand,
 .hero__figure,
 .figure,
 .authors,
@@ -861,7 +867,9 @@ body{
 .codeblock{
   background: var(--card);
   border-color: var(--border);
-}
+} */
+
+
 
 /* latex/code 背景从黑改成浅灰 */
 .latex,
@@ -1235,6 +1243,36 @@ body{
 .hero__cta.btn--primary:active{
   transform: translateY(0px);
 }
+/* Simple table styling for metrics */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+table th,
+table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+table th {
+  background: rgba(0, 0, 0, 0.04);
+  font-weight: 600;
+}
+
+table tr:last-child td {
+  border-bottom: none;
+}
+
+table tr:hover td {
+  background: rgba(0, 0, 0, 0.02);
+}
+
 /* ===== Bench table layout ===== */
 .tabs--bench .tabs__panel{
   background: #fff;

@@ -61,12 +61,12 @@ export function initBenchMatricesHeatToggle({
         const t = (v - min) / span; // 0..1
         const a = alphaMin + (alphaMax - alphaMin) * t;
 
-        td.style.backgroundColor = `rgba(0, 91, 255, ${a.toFixed(3)})`;
+        td.style.backgroundColor = `rgba(220, 53, 69, ${a.toFixed(3)})`;
       });
     });
   }
 
-  if (!section.dataset.heatEnabled) section.dataset.heatEnabled = "true";
+  if (!section.dataset.heatEnabled) section.dataset.heatEnabled = "false";
 
   function render() {
     const on = section.dataset.heatEnabled !== "false";
