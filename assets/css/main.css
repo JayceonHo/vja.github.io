@@ -1492,4 +1492,66 @@ body{
   content: "";
 }
 
+/* ✅ benchmarks-matrices：Sort Off 时隐藏↕/▲/▼ */
+#benchmarks-matrices.sort-off .bench-table thead th[data-sort]::after{
+  content: "" !important;
+}
+
+/* Sort Off 时保持表头正常（不透明） */
+#benchmarks-matrices.sort-off .bench-table thead th[data-sort]{
+  opacity: 1 !important;
+  cursor: default;
+}
+
+/**++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.bench-controls{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.bench-table.sort-disabled thead th[data-sort]{
+  cursor: default;
+  opacity: 1;
+  pointer-events: none;
+}
+
+
+
+/* Heatmap 三档（你可以换色，我先给一个干净的蓝系） */
+#benchmarks-matrices .bench-table td.hm.hm-b1 { background: rgba(0, 91, 255, 0.10); }
+#benchmarks-matrices .bench-table td.hm.hm-b2 { background: rgba(0, 91, 255, 0.22); }
+#benchmarks-matrices .bench-table td.hm.hm-b3 { background: rgba(0, 91, 255, 0.36); }
+
+/* 可选：让热力格子更像“块” */
+#benchmarks-matrices .bench-table td.hm{
+  border-radius: 8px;
+}
+
+/* ✅ bench-controls 两个开关统一美术 */
+.bench-controls .bench-toggle{
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: rgba(255,255,255,0.85);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  color: rgba(0,0,0,0.72);
+  white-space: nowrap;
+  transition: transform .15s ease, filter .15s ease, background .15s ease;
+}
+
+.bench-controls .bench-toggle:hover{
+  filter: brightness(0.98);
+  transform: translateY(-1px);
+}
+
+.bench-controls .bench-toggle[aria-pressed="false"]{
+  opacity: 0.75;
+}
+
+
+
 

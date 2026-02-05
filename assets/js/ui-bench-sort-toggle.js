@@ -30,5 +30,7 @@ export function initBenchSortToggle({
   });
 
   render();
+  section.classList.toggle("sort-off", !on);
+
 }
 
